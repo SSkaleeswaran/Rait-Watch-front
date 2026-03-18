@@ -14,6 +14,9 @@ const SignIn = () => {
 
   const [message, setMessage] = useState("");
 
+  const renderRun = "https://rait-watch.onrender.com";
+
+
   // input change
   const handleChange = (e) => {
     setForm({
@@ -27,7 +30,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", form);
+      await axios.post(`${renderRun}/api/auth/register`, form);
 
       setMessage("Registration Successful!");
 

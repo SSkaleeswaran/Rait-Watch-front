@@ -8,6 +8,9 @@ const LogIn = () => {
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
+  const renderRun = "https://rait-watch.onrender.com";
+  
+
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -15,7 +18,7 @@ const LogIn = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${renderRun}/api/auth/login`,
         { email, password }
       );
 

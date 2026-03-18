@@ -9,8 +9,13 @@ const AdminPanel = () => {
   const [products, setProducts] = useState([]);
   const [editId, setEditId] = useState(null);
 
+  // https://rait-watch.onrender.com
+
+
+  const renderRun = "https://rait-watch.onrender.com";
+
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get("https://rait-watch.onrender.com/api/products");
     setProducts(res.data);
   };
 
@@ -28,13 +33,13 @@ const AdminPanel = () => {
 
     if (editId) {
       await axios.put(
-        `http://localhost:5000/api/products/${editId}`,
+        `${renderRun}/api/products/${editId}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
     } else {
       await axios.post(
-        "http://localhost:5000/api/products",
+        `${renderRun}/api/products`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -48,7 +53,7 @@ const AdminPanel = () => {
   };
 
   const deleteProduct = async (id) => {
-    await axios.delete(`http://localhost:5000/api/products/${id}`);
+    await axios.delete(`${renderRun}/api/products/${id}`);
     fetchProducts();
      setImage(null);
   };
@@ -140,7 +145,7 @@ const AdminPanel = () => {
                     <div className="d-flex align-items-center gap-3">
                       {p.image && (
                         <img
-                          src={`http://localhost:5000/uploads/${p.image}`}
+                          src={`${renderRun}/uploads/${p.image}`}
                           alt="product"
                           style={{
                             width: "70px",
