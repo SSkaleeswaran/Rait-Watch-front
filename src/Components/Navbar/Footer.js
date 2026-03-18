@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../images/main-logo.png";
+
 import visa from "../images/visa-card.png";
 import paypal from "../images/paypal-card.png";
 import master from "../images/master-card.png";
