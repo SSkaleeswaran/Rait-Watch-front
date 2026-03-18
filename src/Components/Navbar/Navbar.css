@@ -1,0 +1,64 @@
+/* general nav */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* dropdown container */
+.dropdown {
+  position: relative;
+  padding-top: 7px;
+}
+
+/* dropdown button (just the text) */
+.dropbtn {
+  cursor: pointer;
+}
+
+/* the dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  min-width: 150px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  z-index: 99;
+}
+
+/* show dropdown when hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* items inside dropdown */
+.dropdown-content a {
+  padding: 10px 20px;
+  display: block;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background: #f2f2f2;
+}
+
+li span{
+    padding-top: 30px;
+}
+
+

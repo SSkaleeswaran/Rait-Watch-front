@@ -1,0 +1,16 @@
+.image-holder img {
+  width: 80%;     
+  max-width: 500px;  
+  object-fit: contain;
+}
+
+.banner-item {
+  justify-content: center;
+  align-items: center;
+}
+
+.image-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
